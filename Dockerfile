@@ -16,4 +16,4 @@ WORKDIR $SERVER_DIR
 
 ENTRYPOINT java -jar ./leshan.jar
 
-EXPOSE 8080 5683/udp
+EXPOSE 8080 5683/udp 5684/udp
