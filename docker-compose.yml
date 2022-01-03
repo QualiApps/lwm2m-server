@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  lwm2m-demo:
+    build:
+      context: ./
+    container_name: lwm2m-demo
+    logging:
+       options:
+          max-size: "10m"
+          max-file: "5"
+    ports:
+       - "8080:8080"
+       - "5683:5683/udp"
+       - "5684:5684/udp"
+    environment:
+       - TZ=Europe/Berlin
+    restart: always
